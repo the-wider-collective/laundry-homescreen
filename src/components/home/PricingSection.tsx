@@ -1,3 +1,4 @@
+
 import React from "react";
 
 interface PricingTierProps {
@@ -16,21 +17,27 @@ const PricingTier: React.FC<PricingTierProps> = ({
   isHighlighted = false,
 }) => {
   const containerClasses = `
-    ${isHighlighted ? "bg-[#EFE9FF]" : "bg-white"} 
-    ${isHighlighted ? "border-[3px]" : "border"} 
-    self-stretch flex w-full flex-col font-normal mt-4 px-[23px] py-[18px] rounded-[10px] border-[#409A9F] border-solid
+    ${isHighlighted ? "border-[#76C5C9]" : "border-[#E5E7EB]"} 
+    bg-white
+    self-stretch flex w-full flex-col font-normal mt-4 px-6 py-5 rounded-[10px] border-2
   `;
 
   return (
     <div className={containerClasses}>
-      <div className="self-stretch flex items-stretch gap-5 text-2xl font-black justify-between">
-        <div className="text-[#409A9F]">{title}</div>
-        <div className="text-[#4A4A4A] leading-none">{price}</div>
+      <div className="self-stretch flex items-center justify-between">
+        <div className="text-[#76C5C9] text-xl font-bold">{title}</div>
+        <div className="text-[#4A4A4A] text-xl font-bold">{price}</div>
       </div>
-      <div className="text-[#4A4A4A] text-sm mt-3">{description}</div>
-      <ul className="text-[#4A4A4A] text-xs leading-5 ml-6 mt-1">
+      <div className="text-[#4A4A4A] text-sm mt-2">{description}</div>
+      <ul className="text-[#4A4A4A] text-sm space-y-2 mt-3">
         {features.map((feature, index) => (
-          <li key={index}>{feature}</li>
+          <li key={index} className="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="8" cy="8" r="7" stroke="#76C5C9" strokeWidth="2"/>
+              <path d="M5 8L7 10L11 6" stroke="#76C5C9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            {feature}
+          </li>
         ))}
       </ul>
     </div>
@@ -40,7 +47,7 @@ const PricingTier: React.FC<PricingTierProps> = ({
 export const PricingSection: React.FC = () => {
   return (
     <section className="mt-8 px-5">
-      <h2 className="text-[#4A4A4A] text-xl font-black">Pricing</h2>
+      <h2 className="text-[#4A4A4A] text-2xl font-bold">Pricing</h2>
 
       <PricingTier
         title="Basic"
