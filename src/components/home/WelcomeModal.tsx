@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import { Dialog } from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 export const WelcomeModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,8 +19,8 @@ export const WelcomeModal = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-        <div className="bg-[#FFBF3D] w-[90%] max-w-[327px] rounded-[10px] overflow-hidden">
+      <DialogContent className="p-0 border-0 bg-transparent">
+        <div className="bg-[#FFBF3D] w-[90%] max-w-[327px] rounded-[10px] overflow-hidden mx-auto">
           <div className="relative p-6">
             {/* Close button */}
             <button 
@@ -86,7 +86,7 @@ export const WelcomeModal = () => {
             </div>
           </div>
         </div>
-      </div>
+      </DialogContent>
     </Dialog>
   );
 };
