@@ -11,11 +11,11 @@ const ReferralCard: React.FC = () => (
         alt="Refer a friend icon"
       />
     </div>
-    <h3 className="text-white text-base font-bold leading-7">
+    <h3 className="text-white text-base font-bold leading-5">
       Refer a friend
     </h3>
-    <div className="flex w-[124px] max-w-full items-stretch gap-2 text-[12px] text-white font-normal mt-1">
-      <p>
+    <div className="flex w-[124px] max-w-full items-center justify-between gap-1 mt-2">
+      <p className="text-[12px] text-white font-normal leading-4">
         Free 20$ orders for
         <br />
         each friend you refer
@@ -23,7 +23,7 @@ const ReferralCard: React.FC = () => (
       <img
         loading="lazy"
         src="https://cdn.builder.io/api/v1/image/assets/436ece1818764ea7a6f389bc5c871752/dfe4baf43d1ef64949be246026cfc86760c6050f59bc0c8a19a5181f5d479050?placeholderIfAbsent=true"
-        className="w-4 object-contain self-center"
+        className="w-3 object-contain self-center"
         alt="Arrow right"
       />
     </div>
@@ -41,9 +41,9 @@ const GiftCard: React.FC = () => (
       />
     </div>
     <div className="flex flex-col items-center text-white">
-      <h3 className="text-base font-bold leading-7">Send a gift!</h3>
-      <div className="flex items-center gap-2 text-[12px] font-normal mt-1">
-        <p>
+      <h3 className="text-base font-bold leading-5">Send a gift!</h3>
+      <div className="flex w-[124px] items-center justify-between gap-1 mt-2">
+        <p className="text-[12px] font-normal leading-4">
           Send your friends a gift
           <br />
           that cleans and delivers
@@ -51,7 +51,7 @@ const GiftCard: React.FC = () => (
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/436ece1818764ea7a6f389bc5c871752/8398ef3e44037d582a6fae02d8d5a184ef4865e51d094debdbba2d6f02ed6a8f?placeholderIfAbsent=true"
-          className="w-4 object-contain"
+          className="w-3 object-contain self-center"
           alt="Arrow right"
         />
       </div>
